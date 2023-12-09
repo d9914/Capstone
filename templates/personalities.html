@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="static/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personality Types Chart</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('personalities') }}">Personalities</a>
+      <a href="{{ url_for('data') }}">Data</a>
+    </div>
+    <div class="container">
+      <h1>Distribution of Personality Types</h1>
+      <iframe src="static/personalities.html" width="600" height="400"></iframe>
+    </div>
+  </body>
+</html>

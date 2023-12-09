@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="static/style.css" />
+
+<html>
+  <head>
+    <title>Personality Prediction</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('personalities') }}">Personalities</a>
+      <a href="{{ url_for('data') }}">Data</a>
+    </div>
+    <img src="static/16.jpg" alt="Myers-Briggs" />
+
+    <h2>Introduction to Myers-Briggs</h2>
+    <p>
+      An introduction to the Myers-Briggs Type Indicator (MBTI) helps understand
+      personalities.
+    </p>
+
+    <form method="post" action="/predict">
+      <textarea
+        name="user_input"
+        rows="4"
+        cols="50"
+        placeholder="Tell me about yourself"
+      ></textarea
+      ><br />
+      <input type="submit" value="Predict" />
+    </form>
+  </body>
+</html>

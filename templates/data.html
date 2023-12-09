@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="static/style.css" />
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script src="{{ url_for('static', filename='image_script.js') }}"></script>
+
+  <body>
+    <div class="navbar">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('personalities') }}">Personalities</a>
+      <a href="{{ url_for('data') }}">Data</a>
+    </div>
+    <div class="gallery" id="gallery">
+      <figure>
+        <img
+          src="{{ url_for('static', filename='Distribution_Types.png') }}"
+          alt="Distribution Types"
+          onclick="toggleLightbox(this)"
+        />
+        <figcaption>Distribution Types</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ url_for('static', filename='post_length.png') }}"
+          alt="Post Length"
+          onclick="toggleLightbox(this)"
+        />
+        <figcaption>Post Length</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ url_for('static', filename='Word_Cloud.png') }}"
+          alt="Word Cloud"
+          onclick="toggleLightbox(this)"
+        />
+        <figcaption>Word Cloud</figcaption>
+      </figure>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="close-btn">&times;</span>
+      <img id="lightbox-img" />
+    </div>
+  </body>
+</html>
